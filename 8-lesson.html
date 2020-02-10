@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8_lesson</title>
+</head>
+
+<body>
+
+  <!--1. Для практикума из занятия 7 продумать, где можно применить замыкания.
+  function getCounter() {
+  let counter = 0;
+  return function() {
+    return counter++;
+  }
+}
+let count = getCounter();
+console.log(count());  // 0
+console.log(count());  // 1
+console.log(count());  // 2
+
+
+    2. Не выполняя кода, ответить, что выведет браузер и почему:
+
+if (!("a" in window)) {
+    var a = 1;
+}
+alert(a); //undefined - потому что переменная созданная var, создается раньше,
+            чем выполняется скрипт, сразу попадая в window не участвуя в if.
+
+var b = function a(x) {
+    x && a(--x);
+};
+alert(a); //выведет саму функцию, так как не создана функция "a". 
+
+function a(x) {
+    return x * 2;
+}
+var a;
+alert(a); //выведет саму функцию
+
+function b(x, y, a) {
+    arguments[2] = 10;
+    alert(a);
+} 
+b(1, 2, 3);//скрипт "arguments[2] = 10;" вложит в третий элемент параметра 10,
+             далее alert выведет 10 так как "а" третий аргумент.
+
+function a() {
+    alert(this);
+}
+a.call(null); //undefined - Вызов call() у функции с параметром null равнозначно вызову call() без аргументов.
+                А без аргументов undefined.
+
+  -->
+</body>
+
+</html>
